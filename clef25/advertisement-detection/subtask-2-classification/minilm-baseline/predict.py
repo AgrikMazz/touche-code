@@ -7,7 +7,7 @@ from tira.third_party_integrations import get_output_directory
 import click
 
 @click.command()
-@click.option('--dataset', default='ads-in-rag-task-2-classification-spot-check', help='The dataset to run predictions on (can point to a local directory).')
+@click.option('--dataset', default='ads-in-rag-task-2-classification-spot-check.jsonl', help='The dataset to run predictions on (can point to a local directory).')
 @click.option('--output', default=Path(get_output_directory(str(Path(__file__).parent))) / "predictions.jsonl", help='The file where predictions should be written to.')
 def main(dataset, output):
     # Load the data
